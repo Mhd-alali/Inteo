@@ -3,3 +3,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.container{
+    @apply  max-w-[100%] lg:max-w-[1200px] mx-auto px-5 lg:px-10 xl:px-8;
+}

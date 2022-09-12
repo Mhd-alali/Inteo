@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 
-import Button from './components/Button'
+import Awards from './components/Awards'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -9,13 +9,11 @@ function App() {
   useEffect(()=>{
     
   },[])
-  
+
   return (
-    <div className="App">
+    <div className="container App">
       <div className="font-body">
-        <Button type={"lg"} ref={refrence}>
-          Contact us
-        </Button>
+        <Awards/>
       </div>
     </div>
   )
