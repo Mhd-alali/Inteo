@@ -5,7 +5,9 @@ function App() {
 
   return (
     <div className="App">
-      
+      <div className="font-body">
+        hell there my name is <span className='font-display text-2xl'>muhammed alali </span>
+      </div>
     </div>
   )
 }
