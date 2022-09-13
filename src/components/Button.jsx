@@ -11,7 +11,7 @@ function Button({ children, type ,classes = "" },ref) {
                         <span className='font-body text-body-sm font-semibold'>
                             {children}
                         </span>
-                        <Arrow/>
+                        <Arrow />
                     </div>
                 </button>
             )

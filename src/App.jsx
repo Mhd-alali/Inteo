@@ -1,20 +1,29 @@
 import { useEffect, useRef, useState } from 'react'
+import gsap from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger'
 
+import Nav from './components/Nav'
+import Hero from './components/Hero';
 import Awards from './components/Awards'
+import About from './components/About'
 
-function App() {
-  const [count, setCount] = useState(0)
-  const refrence = useRef(null)
+gsap.registerPlugin(ScrollTrigger)
 
+function App() {  
   useEffect(()=>{
     
   },[])
 
   return (
-    <div className="container App">
-      <div className="font-body">
-        <Awards/>
+    <div className="App">
+      <Nav/>
+      <Hero />
+      <div className="bg-neutral-900">
+        <div className="container ">
+          <Awards/>
+        </div> 
       </div>
+       <About />
     </div>
   )
 }
