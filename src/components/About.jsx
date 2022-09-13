@@ -32,11 +32,11 @@ export default function About({}) {
     <div className="grid grid-cols-2 gap-8 lg:gap-[2vw] space-y-20 relative">
       <div className="relative overflow-hidden">
         <span className="reveal"></span>
-        <img className='w-[25vw] md:min-w-full justify-self-end' src="./images/about image 2.png" alt="kitchen" />
+        <img className='w-[25vw] min-w-full justify-self-end' src="./images/about image 2.png" alt="kitchen" />
       </div>
       <div className="relative overflow-hidden">
       <span className="reveal"></span>
-        <img className='w-[25vw] md:min-w-full justify-self-start' src="./images/about image.png" alt="living room" />
+        <img className='w-[25vw] min-w-full justify-self-start' src="./images/about image.png" alt="living room" />
       </div>
       <div className="absolute left-1/2  -translate-y-full -translate-x-1/2 z-10">
         <Badge />
