@@ -1,0 +1,1 @@
+export {infiniteSpin , spinOnHover} from './spin'

@@ -18,7 +18,8 @@ export default function About({}) {
     tl.to(container.current.querySelectorAll('.reveal'),{height:"0%",stagger:0.3})
     .fromTo(container.current.querySelectorAll('img'),{scale:1.1},{scale:1},0)
     .fromTo(container.current.querySelectorAll('p'),{autoAlpha:0},{autoAlpha:1},0)
-    .fromTo(container.current.querySelector('h1'),{autoAlpha:0,y:10},{autoAlpha:1,y:0},0)
+    .fromTo(container.current.querySelector('h1'),{autoAlpha:0},{autoAlpha:1},0)
+    
   },[])
 
   return (

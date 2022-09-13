@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 import Button from "./Button";
 import { ReactComponent as Logo } from "../assets/icons/logo.svg";
+import {spinOnHover} from '../animations';
 
 function Nav() {
+  const ref = useRef(null)
+
+  useEffect(()=>{
+    spinOnHover(ref,ref.current.querySelector("svg"))
+  },[])
+
   return (
     <nav className="container flex justify-between py-3">
       <Logo />
@@ -11,7 +18,7 @@ function Nav() {
         <ListItem>About</ListItem>
         <ListItem>Services</ListItem>
         <ListItem>Our Work</ListItem>
-        <Button children={"Contact Us"} type="md"/>
+        <Button ref={ref} children={"Contact Us"} type="md"/>
       </ul>
     </nav>
   );
