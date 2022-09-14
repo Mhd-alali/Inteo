@@ -14,17 +14,21 @@ function Awards() {
     ]
 
     return (
-        <div className="flex justify-between items-center gap-5 py-6">
-            <div className="self-start md:self-center flex items-center relative pt-6 md:p-0">
-                <h3 className='italic text-display-xs text-primary-300 -rotate-90 '>Awards</h3>
-                <hr className='b-2 border border-primary-300 md:w-20 w-10 '/>
+        <section className="bg-neutral-900">
+            <div className="container ">
+                <div className="flex justify-between items-center gap-5 py-6">
+                    <div className="self-start md:self-center flex items-center relative pt-6 md:p-0">
+                        <h3 className='italic text-display-xs text-primary-300 -rotate-90 '>Awards</h3>
+                        <hr className='b-2 border border-primary-300 md:w-20 w-10 '/>
+                    </div>
+                    <div className="grid grid-rows-4 md:grid-rows-2 md:grid-cols-2 gap-16 lg:grid-cols-4 lg:grid-rows-1 w-full items-center font-body text-body-sm text-neutral-300">
+                        {
+                            awards.map(award => <Award key={award.agency} icon={award.icon} year={award.year} agency={award.agency}/>)
+                            }
+                    </div>
+                </div>
             </div>
-            <div className="grid grid-rows-4 md:grid-rows-2 md:grid-cols-2 gap-16 lg:grid-cols-4 lg:grid-rows-1 w-full items-center font-body text-body-sm text-neutral-300">
-                 {
-                    awards.map(award => <Award key={award.agency} icon={award.icon} year={award.year} agency={award.agency}/>)
-                 }
-            </div>
-        </div>
+        </section>
      );
 }
 

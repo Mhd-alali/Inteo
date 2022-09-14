@@ -15,9 +15,9 @@ function Nav() {
     <nav className="container flex justify-between py-3">
       <Logo />
       <ul className="flex gap-8 items-center ">
-        <ListItem>About</ListItem>
-        <ListItem>Services</ListItem>
-        <ListItem>Our Work</ListItem>
+        <a href="#About"><ListItem>About</ListItem></a>
+        <a href="#Services"><ListItem>Services</ListItem></a>
+        <a href="#Our-Work"><ListItem>Our Work</ListItem></a>
         <Button ref={ref} children={"Contact Us"} type="md"/>
       </ul>
     </nav>

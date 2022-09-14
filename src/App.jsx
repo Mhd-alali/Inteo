@@ -6,6 +6,11 @@ const Nav = React.lazy(() => import('./components/Nav'))
 const Hero = React.lazy(() => import('./components/Hero'))
 const Awards = React.lazy(() => import('./components/Awards'))
 const About = React.lazy(() => import('./components/About'))
+const Metrics = React.lazy(() => import('./components/Metrics'))
+const Services = React.lazy(() => import('./components/Services'))
+const Works = React.lazy(() => import('./components/Works'))
+const Fotter = React.lazy(() => import('./components/Fotter'))
+
 import Loading from './components/Loading'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -23,15 +28,18 @@ function App() {
     <>
       <Loading isLoading={loading} />
       <Suspense fallback={null}>
-        <div className="App relative">
+        <div className="App relative text-neutral-900 mb-10">
           <Nav />
           <Hero />
-          <div className="bg-neutral-900">
-            <div className="container ">
-              <Awards />
-            </div>
-          </div>
+          <Awards />
           <About />
+          <Metrics />
+          <hr className="container border-neutral-300"/>
+          <Services />
+          <hr className="container border-neutral-300"/>
+          <Works />
+          <hr className="container border-neutral-300"/>
+           <Fotter />
         </div>
       </Suspense>
     </>
