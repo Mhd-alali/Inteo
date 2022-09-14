@@ -2,7 +2,7 @@ import React from 'react';
 
 import {ReactComponent as German} from '../assets/icons/german.svg'
 import {ReactComponent as Golda} from '../assets/icons/golda.svg'
-import {ReactComponent as If} from '../assets/icons/If.svg'
+import {ReactComponent as If} from '../assets/icons/if.svg'
 import {ReactComponent as Good} from '../assets/icons/good.svg'
 
 function Awards() {
