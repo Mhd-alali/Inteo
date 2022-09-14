@@ -13,8 +13,9 @@ export default function About({}) {
       start:"top 30%",
       toggleActions:"play none none reverse"
     }})
+    gsap.set(container.current.querySelectorAll('.reveal'),{height:"100%"})
     
-    tl.fromTo(container.current.querySelectorAll('.reveal'),{height:"100%"},{height:"0%",stagger:0.3})
+    tl.to(container.current.querySelectorAll('.reveal'),{height:"0%",stagger:0.3})
     .fromTo(container.current.querySelectorAll('img'),{scale:1.2},{scale:1},0)
     .fromTo(container.current.querySelectorAll('p'),{autoAlpha:0},{autoAlpha:1},0)
     .fromTo(container.current.querySelector('h1'),{autoAlpha:0},{autoAlpha:1},0)

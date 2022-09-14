@@ -16,8 +16,9 @@ export default function Works({}) {
       start:"top 70%",
       toggleActions:"play none none reverse",
     }})
+    gsap.set(container.current.querySelectorAll('.reveal'),{height:"100%"})
     
-    tl.fromTo(container.current.querySelectorAll('.reveal'),{height:"100%"},{height:"0%",stagger:0.3})
+    tl.to(container.current.querySelectorAll('.reveal'),{height:"0%",stagger:0.3})
     .fromTo(container.current.querySelectorAll('img'),{scale:1.2},{scale:1},0)
     .fromTo(container.current.querySelectorAll('p'),{autoAlpha:0},{autoAlpha:1},0)
     .fromTo(container.current.querySelectorAll('h6 , h5'),{autoAlpha:0},{autoAlpha:1},0)
@@ -47,8 +48,8 @@ function Work({img,title,text}) {
   return (
   <div className="space-y-6">
     <div className="relative overflow-hidden">
-      <img src={img} alt="work" className="w-full object-cover"/>
       <span className="reveal"></span>
+      <img src={img} alt="work" className="w-full object-cover"/>
     </div>
 
     <h6 className="text-display-xs md:text-display-md">{title}</h6>
