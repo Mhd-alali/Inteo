@@ -1,6 +1,6 @@
-import React, { Suspense, useEffect, useState } from 'react'
+import React, { Suspense, useEffect, useLayoutEffect, useState } from 'react'
 import gsap from 'gsap'
-import {ScrollTrigger} from 'gsap/ScrollTrigger'
+import ScrollTrigger from 'gsap/ScrollTrigger'
 
 const Nav = React.lazy(() => import('./components/Nav'))
 const Hero = React.lazy(() => import('./components/Hero'))
@@ -10,13 +10,13 @@ const Metrics = React.lazy(() => import('./components/Metrics'))
 const Services = React.lazy(() => import('./components/Services'))
 const Works = React.lazy(() => import('./components/Works'))
 const Fotter = React.lazy(() => import('./components/Fotter'))
-
 import Loading from './components/Loading'
-
-gsap.registerPlugin(ScrollTrigger)
 
 function App() {
   const [loading, setLoading] = useState(true)
+  useLayoutEffect(()=>{
+    gsap.registerPlugin(ScrollTrigger)
+  },[])
 
   useEffect(() => {
     setTimeout(() => {
