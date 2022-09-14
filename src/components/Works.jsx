@@ -30,14 +30,14 @@ export default function Works({}) {
       <EyebrowText>recent works</EyebrowText>
       <h5 className="text-display-md md:text-display-xl">some of our crafts made with love</h5>
       <div className="my-24">
-        <Work img="./images/villa.png" title="Villa Furnishing & Interior" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus fringilla dui amet faucibus nam. Erat id laoreet posuere etiam morbi."/>
+        <Work img="./images/villa.webp" title="Villa Furnishing & Interior" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus fringilla dui amet faucibus nam. Erat id laoreet posuere etiam morbi."/>
       </div>
       <Button ref={btn} children={"Contact Us"} type="lg" classes="absolute bottom-0 translate-y-[150%] lg:relative"/>
     </div>
 
     <div className="space-y-20 lg:px-14 basis-full">
-        <Work img="./images/hotel.png" title="Luxury Hotel Renovation" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus fringilla dui amet faucibus nam."/>
-        <Work img="./images/pool.png" title="Residence Swimming Pool" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus fringilla dui amet faucibus nam."/>
+        <Work img="./images/hotel.webp" title="Luxury Hotel Renovation" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus fringilla dui amet faucibus nam."/>
+        <Work img="./images/pool.webp" title="Residence Swimming Pool" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus fringilla dui amet faucibus nam."/>
     </div>
   </section>
   )

@@ -12,7 +12,7 @@ export default function Hero({}) {
         <div className="absolute translate-y-1/3 left-1/2 -translate-x-1/2  lg:left-28 z-10">
           <Cta />
         </div>
-        <img src="./images/hero.png" alt="" className="mt-24 object-cover" />
+        <img src="./images/hero.webp" alt="" className="mt-24 object-cover" />
       </div>
     </section>
   );
