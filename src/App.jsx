@@ -1,6 +1,6 @@
-import React, { Suspense, useEffect, useRef, useState } from 'react'
+import React, { Suspense, useEffect, useState } from 'react'
 import gsap from 'gsap'
-import ScrollTrigger from 'gsap/ScrollTrigger'
+import {ScrollTrigger} from 'gsap/ScrollTrigger'
 
 const Nav = React.lazy(() => import('./components/Nav'))
 const Hero = React.lazy(() => import('./components/Hero'))
