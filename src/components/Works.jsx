@@ -11,7 +11,7 @@ export default function Works({}) {
   useEffect(()=>{
     spinOnHover(btn,btn.current.querySelector("svg"))
 
-    const tl = gsap.timeline({defaults:{duration:1,ease:"power1.inOut"},scrollTrigger:{
+    const tl = gsap.timeline({defaults:{duration:1,lazy:false,ease:"power1.inOut"},scrollTrigger:{
       trigger:container.current,
       start:"top 70%",
       toggleActions:"play none none reverse",
