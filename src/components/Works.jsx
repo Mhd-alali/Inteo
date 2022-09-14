@@ -17,7 +17,7 @@ export default function Works({}) {
       toggleActions:"play none none reverse",
     }})
     
-    tl.to(container.current.querySelectorAll('.reveal'),{height:"0%"})
+    tl.fromTo(container.current.querySelectorAll('.reveal'),{height:"100%"},{height:"0%",stagger:0.3})
     .fromTo(container.current.querySelectorAll('img'),{scale:1.2},{scale:1},0)
     .fromTo(container.current.querySelectorAll('p'),{autoAlpha:0},{autoAlpha:1},0)
     .fromTo(container.current.querySelectorAll('h6 , h5'),{autoAlpha:0},{autoAlpha:1},0)

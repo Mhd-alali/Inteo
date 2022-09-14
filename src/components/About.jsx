@@ -6,7 +6,6 @@ import Badge from './Badge';
 
 export default function About({}) {
   const container = useRef(null)
-  const badge = useRef(null)
 
   useEffect(()=>{
     const tl = gsap.timeline({defaults:{duration:1,ease:"power1.inOut"},scrollTrigger:{
@@ -15,7 +14,7 @@ export default function About({}) {
       toggleActions:"play none none reverse"
     }})
     
-    tl.to(container.current.querySelectorAll('.reveal'),{height:"0%",stagger:0.3})
+    tl.fromTo(container.current.querySelectorAll('.reveal'),{height:"100%"},{height:"0%",stagger:0.3})
     .fromTo(container.current.querySelectorAll('img'),{scale:1.2},{scale:1},0)
     .fromTo(container.current.querySelectorAll('p'),{autoAlpha:0},{autoAlpha:1},0)
     .fromTo(container.current.querySelector('h1'),{autoAlpha:0},{autoAlpha:1},0)
