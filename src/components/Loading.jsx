@@ -1,5 +1,5 @@
 import gsap from "gsap";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useLayoutEffect, useRef } from "react";
 
 import { ReactComponent as Load } from '../assets/icons/load.svg'
 
@@ -7,13 +7,13 @@ export default function Loading({ isLoading }) {
 
   const ref = useRef(null)
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     gsap.set(ref.current.querySelectorAll("svg"), { transformBox: 'fill-box' })
     gsap.set(ref.current.querySelectorAll("#circle1,#circle2,#circle3"), { transformOrigin: "center" })
 
-    gsap.to(ref.current.querySelectorAll("#circle1"), { scale: 1.2, duration: .8, repeat: -1, yoyo: true, ease: 'power1.in', delay: 0 })
-    gsap.to(ref.current.querySelectorAll("#circle2"), { scale: 1.2, duration: .8, repeat: -1, yoyo: true, ease: 'power1.in', delay: .4 })
-    gsap.to(ref.current.querySelectorAll("#circle3"), { scale: 1.2, duration: .8, repeat: -1, yoyo: true, ease: 'power1.in', delay: .8 })
+    gsap.fromTo(ref.current.querySelectorAll("#circle1"),{scale:.3},{ scale: 1.2, duration: .8, repeat: -1, yoyo: true, ease: 'power1.in', delay: 0 })
+    gsap.fromTo(ref.current.querySelectorAll("#circle2"),{scale:.3},{ scale: 1.2, duration: .8, repeat: -1, yoyo: true, ease: 'power1.in', delay: .4 })
+    gsap.fromTo(ref.current.querySelectorAll("#circle3"),{scale:.3},{ scale: 1.2, duration: .8, repeat: -1, yoyo: true, ease: 'power1.in', delay: .8 })
 
   }, [])
 
