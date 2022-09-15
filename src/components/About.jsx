@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 
 import EyebrowText from './EyebrowText';
@@ -7,7 +7,7 @@ import Badge from './Badge';
 export default function About({}) {
   const container = useRef(null)
 
-  useEffect(()=>{
+  useLayoutEffect(()=>{
     const tl = gsap.timeline({defaults:{duration:1,ease:"power1.inOut"},scrollTrigger:{
       trigger:container.current,
       start:"top 30%",

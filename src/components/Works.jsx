@@ -1,5 +1,5 @@
 import gsap from "gsap";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useLayoutEffect, useRef } from "react";
 import { spinOnHover } from "../animations";
 import Button from "./Button";
 import EyebrowText from "./EyebrowText";
@@ -8,7 +8,7 @@ export default function Works({}) {
   const btn = useRef(null)
   const container = useRef(null)
 
-  useEffect(()=>{
+  useLayoutEffect(()=>{
     spinOnHover(btn,btn.current.querySelector("svg"))
 
     const tl = gsap.timeline({defaults:{duration:1,ease:"power1.inOut"},scrollTrigger:{
