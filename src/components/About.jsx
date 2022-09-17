@@ -1,25 +1,22 @@
-import React, { useEffect, useLayoutEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 
 import EyebrowText from './EyebrowText';
 import Badge from './Badge';
+import { useIntersectionObserver } from "../animations";
 
 export default function About({}) {
   const container = useRef(null)
 
-  useLayoutEffect(()=>{
-    const tl = gsap.timeline({defaults:{duration:1,ease:"power1.inOut"},scrollTrigger:{
-      trigger:container.current,
-      start:"top 30%",
-      toggleActions:"play none none reverse"
-    }})
-    gsap.set(container.current.querySelectorAll('.reveal'),{height:"100%"})
-    
-    tl.to(container.current.querySelectorAll('.reveal'),{height:"0%",stagger:0.3})
+  useEffect(()=>{
+    const tl = gsap.timeline({defaults:{duration:1,lazy:false,ease:"power1.inOut"}})
+    .to(container.current.querySelectorAll('.reveal'),{height:"0%",stagger:0.3})
     .fromTo(container.current.querySelectorAll('img'),{scale:1.2},{scale:1},0)
     .fromTo(container.current.querySelectorAll('p'),{autoAlpha:0},{autoAlpha:1},0)
-    .fromTo(container.current.querySelector('h1'),{autoAlpha:0},{autoAlpha:1},0)
-    
+    .fromTo(container.current.querySelector('h1'),{autoAlpha:0},{autoAlpha:1},0)    
+  
+    useIntersectionObserver({element:container.current,threshold:0.3},_=>tl.play(),_=>tl.reverse())
+
   },[])
 
   return (

@@ -13,7 +13,7 @@ function Cta() {
     }, [])
 
     return (
-        <div ref={ref} className='bg-neutral-900 max-w-min rounded-full p-[5px] border-4 border-white relative'>
+        <div ref={ref} className='bg-neutral-900 rounded-full p-[5px] border-4 border-white relative'>
             <div >
                 <CtaIcon />
             </div>
